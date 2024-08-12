@@ -1,0 +1,25 @@
+article {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+article h2 {
+  margin-bottom: 0.5rem;
+}
+
+article time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  list-style: none;
+  margin: 0 0.5rem;
+}

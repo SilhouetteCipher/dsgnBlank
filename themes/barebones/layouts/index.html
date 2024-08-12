@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Site.Title }}</h1>
+
+<p>Total Pages: {{ len .Site.RegularPages }}</p>
+<p>
+  Pages of type 'posts': {{ len (where .Site.RegularPages "Type" "posts") }}
+</p>
+
+{{ $pages := where .Site.RegularPages "Type" "posts" }} {{ range $pages }}
+<article>
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <p>Date: {{ .Date.Format "2006-01-02" }}</p>
+  <p>Type: {{ .Type }}, Section: {{ .Section }}</p>
+  <p>{{ .Summary }}</p>
+  <a href="{{ .Permalink }}">Read more</a>
+</article>
+{{ else }}
+<p>No posts found</p>
+{{ end }} {{ end }}

@@ -1,0 +1,8 @@
+name = "Barebones"
+license = "MIT"
+licenselink = "https://github.com/yourusername/barebones/blob/master/LICENSE"
+description = "A minimal Hugo theme to build upon"
+
+[author]
+  name = "Your Name"
+  homepage = "https://yourwebsite.com"
