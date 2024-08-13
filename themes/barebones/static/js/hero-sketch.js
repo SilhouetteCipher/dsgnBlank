@@ -17,12 +17,12 @@ function createGrid() {
   // Adjust grid spacing based on screen width
   // Increase the divisor (60) for a denser grid, decrease for a sparser grid
   // Increase the minimum value (10) for a sparser grid on small screens
-  let gridSpacing = max(width / 70, 10);
+  let gridSpacing = max(width / 190, 10);
 
   // Adjust font size based on screen width
   // Increase the divisor (4) for smaller text, decrease for larger text
   // Increase the minimum value (80) for larger text on small screens
-  let fontSize = max(width / 4, 80);
+  let fontSize = max(width / 8, 150);
 
   // Create a temporary graphics buffer to draw the text
   let gfx = createGraphics(width, height);
