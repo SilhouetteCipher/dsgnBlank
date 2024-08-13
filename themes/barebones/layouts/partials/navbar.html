@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <div class="navbar-content">
+    <a href="{{ .Site.BaseURL }}" class="navbar-brand">{{ .Site.Title }}</a>
+    <ul class="navbar-menu">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

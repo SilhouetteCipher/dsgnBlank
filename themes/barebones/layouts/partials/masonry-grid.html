@@ -1,0 +1,14 @@
+<div class="masonry-grid">
+  {{ range . }}
+  <article class="masonry-item">
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <time datetime="{{ .Date.Format `2006-01-02T15:04:05Z07:00` }}">
+      {{ .Date.Format "January 2, 2006" }}
+    </time>
+    <p>{{ .Summary }}</p>
+    <a href="{{ .Permalink }}">Read more</a>
+  </article>
+  {{ else }}
+  <p>No posts found</p>
+  {{ end }}
+</div>
