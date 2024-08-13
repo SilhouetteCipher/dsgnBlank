@@ -2,7 +2,7 @@ let dots = [];
 const dotSize = 2;
 const maxDistance = 150; // Increased for wider effect
 const flockStrength = 0.03; // Adjust this to change how strongly dots flock
-const returnStrength = 0.02; // Adjust this to change how quickly dots return
+const returnStrength = 0.01; // Adjust this to change how quickly dots return
 
 function setup() {
   const container = document.getElementById("hero-container");

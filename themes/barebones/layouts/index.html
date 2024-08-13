@@ -1,8 +1,6 @@
 {{ define "main" }}
-<h1>{{ .Site.Title }}</h1>
 
 <!-- You can add any unique home page content here -->
-<p>Welcome to my blog!</p>
 
 {{ $pages := where .Site.RegularPages "Type" "posts" }} {{ partial
 "masonry-grid.html" $pages }} {{ end }}

@@ -1,12 +1,25 @@
 <div class="masonry-grid">
   {{ range . }}
   <article class="masonry-item">
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <time datetime="{{ .Date.Format `2006-01-02T15:04:05Z07:00` }}">
-      {{ .Date.Format "January 2, 2006" }}
-    </time>
-    <p>{{ .Summary }}</p>
-    <a href="{{ .Permalink }}">Read more</a>
+    {{ if .Params.image }}
+    <img
+      src="{{ .Params.image | relURL }}"
+      alt="{{ .Title }}"
+      class="masonry-item-image"
+    />
+    {{ else }} <img src="{{ "/images/card/default.jpg" | relURL }}" alt="{{
+    .Title }}" class="masonry-item-image"> {{ end }}
+    <div class="masonry-item-content">
+      {{ if .Params.projectNumber }}
+      <div class="project-number">{{ .Params.projectNumber }}</div>
+      {{ end }}
+      <p class="project-title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+      {{ if .Params.category }}
+      <div class="project-category">{{ .Params.category }}</div>
+      {{ end }}
+      <div class="project-year">{{ .Date.Format "2006" }}</div>
+      <a href="{{ .Permalink }}">Read more</a>
+    </div>
   </article>
   {{ else }}
   <p>No posts found</p>

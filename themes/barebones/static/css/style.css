@@ -85,34 +85,50 @@ main {
 /* Post Grid Styles */
 .masonry-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 1rem;
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .masonry-item {
-  break-inside: avoid;
-  background: #f9f9f9;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.masonry-item-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.masonry-item-content {
   padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.2rem;
 }
 
-.masonry-item h2 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-
-.masonry-item time {
+.project-number {
   font-size: 0.8rem;
   color: #666;
 }
 
-.masonry-item p {
-  font-size: 0.9rem;
+.project-title {
+  margin: 0.1rem 0;
 }
 
+.project-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.project-category {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.project-year {
+  font-size: 0.8rem;
+  color: #666;
+}
 @media (max-width: 600px) {
   .masonry-grid {
     grid-template-columns: 1fr;
