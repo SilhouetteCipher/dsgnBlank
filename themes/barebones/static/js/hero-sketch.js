@@ -1,6 +1,6 @@
 let dots = [];
 const dotSize = 2; // Size of each dot. Increase for larger dots.
-const maxDistance = 80; // Maximum distance for cursor interaction. Increase for wider effect area.
+const maxDistance = 200; // Maximum distance for cursor interaction. Increase for wider effect area.
 
 function setup() {
   const container = document.getElementById("hero-container");
