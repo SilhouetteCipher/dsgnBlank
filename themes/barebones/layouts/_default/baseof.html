@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ `css/style.css` | relURL }}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
   </head>
   <body>
-    {{ partial "navbar.html" . }}
+    {{ partial "navbar.html" . }} {{ partial "hero.html" . }}
+
     <main role="main">{{ block "main" . }}{{ end }}</main>
+
     {{ partial "footer.html" . }}
+    <script src="{{ `js/hero-sketch.js` | relURL }}"></script>
   </body>
 </html>
